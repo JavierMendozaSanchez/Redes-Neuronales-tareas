@@ -34,7 +34,7 @@ print(" Datos cargados correctamente")
 #Parte del codigo que permite entrenar a la red
 
 net = network.Network([784, 30, 10])
-net.SGD(training_data, 30, 10, 3.0, test_data=test_data)
+net.SGD(training_data, 30, 10, 1.0, test_data=test_data)
 #guardamos nuestra red
 with open("red_prueba.pkl", "wb") as f:
     pickle.dump(net, f)
